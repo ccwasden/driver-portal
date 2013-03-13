@@ -1,0 +1,10 @@
+
+php artisan scaffold::make user username:string password:string foursquare_token:string foursquare_id:string phone:string has_many:text.sent,text.received,deliveryreq.receieved,bid.sent timestamps
+
+php artisan scaffold::make text.sent content:string belongs_to:user timestamps
+
+php artisan scaffold::make text.received content:string belongs_to:user timestamps
+
+php artisan scaffold::make deliveryreq.received esl:string store_lat:string store_lng:string delivery_time:string pickup_time:string name:string belongs_to:user timestamps
+
+php artisan scaffold::make bid.sent delivery_time:string belongs_to:user timestamps
